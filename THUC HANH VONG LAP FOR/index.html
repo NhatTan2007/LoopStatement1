@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>[Thực hành] Sử dụng vòng lặp for</title>
+</head>
+<body>
+      <p>Bài 1</p>
+      <script>
+            for (let count = 0; count < 6; count++) {
+                  document.write(`The number is ${count}</br>`);
+            };
+      </script>
+
+      <p>Bài 2</p>
+      <script>
+            let yourNumber = parseInt(prompt("Nhập vào số ngẫu nhiên > 0"));
+            while(yourNumber <= 0) {
+                 yourNumber = parseInt(prompt("Nhập vào số ngẫu nhiên > 0"));
+            };
+            let sum = 0;
+            for (let count = 0; count <= yourNumber; count++) {
+                  sum += count;
+            };
+            document.write(`Tổng các phần tử từ 1 đến ${yourNumber} là ${sum}`);
+      </script>
+</body>
+</html>
