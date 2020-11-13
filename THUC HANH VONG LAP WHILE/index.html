@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>[Thực hành] Sử dụng vòng lặp while</title>
+</head>
+<body>
+      <p>Bài 1</p>
+      <script>
+            let numberInput = 0;
+            let sumAllNumber = 0;
+            while (numberInput !== -1) {
+                  numberInput = parseInt(prompt("Nhập vào số ngẫu nhiên (dừng lại khi nhập -1)"));
+                  if (numberInput !== -1) {sumAllNumber += numberInput};
+            };
+            alert (`Tổng các số đã nhập là ${sumAllNumber}`);
+      </script>
+
+      <p>Bài 2</p>
+      <script>
+            let widthHr = 1;
+            while (widthHr <= 100) {
+                  document.write(`<hr width=${widthHr}%;>`);
+                  widthHr++;
+            }
+      </script>
+</body>
+</html>
