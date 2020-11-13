@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>[Thực hành] Sử dụng vòng lặp lồng nhau</title>
+</head>
+<body onload="printTable1()">
+      <table style="border-collapse:collapse;">
+            <caption style="font-weight:bold; font-size: 1.5rem;"><strong>Sử dụng vòng lặp for</strong></caption>
+            <thead></thead>
+            <tbody>
+                  <tr id="1"></tr>
+                  <tr id="2"></tr>
+                  <tr id="3"></tr>
+                  <tr id="4"></tr>
+                  <tr id="5"></tr>
+                  <tr id="6"></tr>
+                  <tr id="7"></tr>
+                  <tr id="8"></tr>
+                  <tr id="9"></tr>
+                  <tr id="10"></tr>
+            </tbody>
+            <tfoot></tfoot>
+      </table>
+
+      <script>
+            function printTable1() {
+            for (let count = 1; count <= 10; count++) {
+                  for (let count1 = 1; count1 <= 10; count1++) {
+                        let outputNumber = count*count1;
+                        document.getElementById(count.toString()).innerHTML += `<td style="border: 2px solid black; padding:10px 3px; width: 40px;">${outputNumber}</td>`
+                  }
+            }
+            };
+      </script>
+      
+      <script>
+            let tableContent = `<table style="border-collapse:collapse;">
+            <caption style="font-weight:bold; font-size: 1.5rem;"><strong>Sử dụng vòng lặp while</strong></caption>
+            <tbody>`;
+            printTable2();
+            function printTable2() {
+                  let count  = 1;
+                  let count1 = 1;
+                  while (count <= 10) {
+                        tableContent += "<tr>";
+                        while (count1 <= 10) {
+                              let outputNumber = count*count1;
+                              tableContent +=`<td style="border: 2px solid black; padding:10px 3px; width: 40px;">${outputNumber}</td>`;
+                              count1++;
+                        }
+                        tableContent += "</tr>";
+                        count1 = 1;
+                        count++;
+                  };
+                  document.write(tableContent);
+            }
+      </script>
+</body>
+</html>
